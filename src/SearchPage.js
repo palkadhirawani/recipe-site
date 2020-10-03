@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import './SearchPage.css';
 import RecipeList from './RecipeList.js';
+import {Link} from 'react-router-dom';
 
 const SearchPage = () => {
 
-    const [rec, setRec] = useState([]); 
+    const [rec, setRec] = useState([]);
     //putting square brackets inside useState because we want rec to be an array, because "recipes" in the api is an array.
     const [search, setSearch] = useState("");
     const [query, setQuery] = useState(); 
@@ -12,7 +13,7 @@ const SearchPage = () => {
 
     useEffect(() => {
         getRecipes();
-    }, [query]); 
+    }, [query]);
     //declaring the second parameter as an empty array so that the useEffect hook runs only once
     //**UPDATE** query is passed here so that the useEffect hook only runs when query is changed.
 
@@ -54,11 +55,13 @@ const SearchPage = () => {
             </div>
 
             {rec.map(recipe => (
-                <RecipeList 
-                    key={recipe._id}
-                    title={recipe.title}
-                    image={recipe.image_url}
-                />
+                <Link to='/search'>
+                    <RecipeList 
+                        key={recipe._id}
+                        title={recipe.title}
+                        image={recipe.image_url}
+                    />
+                </Link>
             ))}
         </div>
     );
