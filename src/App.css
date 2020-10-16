@@ -20,7 +20,7 @@
     gap: 35px;
 }
 .eachrec {
-    border: 0.740654px solid #000000;
+    border: 1px solid #000000;
     padding: 15px;
 }
 .eachrec img {
@@ -30,6 +30,6 @@
 
 .main-right {
     width: 30vw;
-    background: rgba(208, 228, 230, 0.52);
+    background: #D0E4E6;
     text-align: center;
 }

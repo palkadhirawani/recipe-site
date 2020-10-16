@@ -3,8 +3,9 @@ import './App.css';
 import SearchPage from './SearchPage.js';
 import './SearchPage.css'
 import {Link} from 'react-router-dom';
+import Rec from './Rec.js'
 
-const HomePage = () => {
+const HomePage = ({rec_id}) => {
 
     const [top, setTop] = useState([]);
 
@@ -22,13 +23,13 @@ const HomePage = () => {
     
     return (
         <div>
-            <SearchPage />
+            <Rec />
             <div className="main-content">
                 <div className="main-left">
                     <h2>TOP RATED RECIPES</h2>
-                    <Link to='/recipe'>
+                    <Link to={`/search/${rec_id}`}>
                         <div className="top5rec">
-                            {top.slice(0, 7).map((toprec) => (
+                            {top.slice(0, 5).map((toprec) => (
                                 <div className="eachrec">
                                     <img src={toprec.image_url}></img>
                                     <p>{toprec.title}</p>
