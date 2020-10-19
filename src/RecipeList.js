@@ -7,11 +7,9 @@ const RecipeList = ({title, image, rec_id}) => {
     return(
         <div className="full">
             <Link to={`/search/${rec_id}`}>
-                <div className="hello">
-                    <div className="qwerty">
-                        <img src={image} alt="recipe"></img>
-                        <p>{title}</p>
-                    </div>
+                <div className="qwerty">
+                    <img src={image} alt="recipe"></img>
+                    <p>{title}</p>
                 </div>
             </Link>
         </div>

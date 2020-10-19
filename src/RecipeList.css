@@ -1,12 +1,57 @@
-.hello {
-    padding: 70px;
+/* REC.JS */
+.beaut {
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    gap: 20px;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 40px;
+    padding: 100px;
+    margin-right: 120px;
+}
+.blog {
+    background: #D0E4E6;
+    text-align: center;
+}
+.blog h1 {
+    padding: 50px;
+    font-size: 45px;
+}
+.blog h1:before, .blog h1:after {
+    background-color: #6FCF97;
+    content: "";
+    display: inline-block;
+    height: 5px;
+    position: relative;
+    vertical-align: middle;
+    width: 25%;
+  }
+.blog h1:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+.blog h1:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+.blog-grid {
+    display: grid;
+    grid-template-columns: 28% 28% 28%;
+    column-gap: 50px;
+    row-gap: 70px;
+    justify-content: center;
+    padding: 0 12%;
+}
+.blog-img5 {
+    margin-top: -12vh;
+}
+
+/* RECIPELIST.JS */
+.full a {
+    text-decoration: none;
+    color: black;
 }
 .qwerty {
     border: 1px solid #000000;
     padding: 15px;
+    height: 260px;
 }
 .qwerty img {
     width: 100%;

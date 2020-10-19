@@ -2,9 +2,41 @@ nav {
     height: 60px;
     background: #212121;
     max-width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px 0 40px;
+}
+nav h3 {
+    margin: 0;
+    line-height: 55px;
+    font-family: 'Sansita Swashed', cursive;
+    font-size: 33px;
+    color: #6FCF97;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+nav ul {
+    line-height: 60px;
+    padding: 0;
+    margin: 0;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+nav ul li {
+    list-style: none;
+    font-size: 20px;
+    color: #A0F5C3;
+}
+nav ul li:hover {
+    color: rgb(190, 190, 190);
 }
 nav a {
     text-decoration: none;
+    color: #A0F5C3;
+}
+nav ul li a:hover {
+    color: rgb(190, 190, 190);
 }
 
 .landing-page {
@@ -32,8 +64,19 @@ nav a {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid #FFFFFF;
     width: 750px;
-    height: 35px;
+    height: 38px;
     box-sizing: border-box;
     backdrop-filter: blur(5px);
     border-radius: 50px;
+    padding: 12px 55px;
+    background-image: url('images/search\ icon.png');
+    background-position: 20px 10px;
+    background-size: 2.4%;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    line-height: 38px;
+}
+.search-bar:focus {
+    border: none;
+    color: white;
 }

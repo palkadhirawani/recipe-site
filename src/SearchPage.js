@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './SearchPage.css';
 import { BrowserRouter as Router, Switch, Route, Redirect, useHistory } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 const SearchPage = ({rec, setRec}) => {
 
@@ -40,8 +41,18 @@ const SearchPage = ({rec, setRec}) => {
 
             <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&display=swap" rel="stylesheet"></link>
             <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet"></link>
+            <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600;700;800;900&display=swap" rel="stylesheet">
 
+            </link>
             <nav>
+                <h3>AllRecipes</h3>
+                <ul>
+                    <Link to="/recipe-site">
+                    <li>Home</li>
+                    </Link>
+                    <li> <a href="#categories">Categories</a> </li>
+                    <li>Blog</li>
+                </ul>
             </nav>
             <div className="landing-page">
                 <div className="heading">
