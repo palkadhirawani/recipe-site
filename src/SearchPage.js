@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './SearchPage.css';
-import RecipeList from './RecipeList.js';
 import { BrowserRouter as Router, Switch, Route, Redirect, useHistory } from 'react-router-dom';
-import {Link} from 'react-router-dom';
 
-const SearchPage = (props) => {
+const SearchPage = ({rec, setRec}) => {
 
     let history = useHistory();
     const [search, setSearch] = useState("");
@@ -21,7 +19,7 @@ const SearchPage = (props) => {
         const response = await fetch(`https://cors-anywhere.herokuapp.com/https://recipesapi.herokuapp.com/api/search?q=${query}`); 
         //writing await because we have to wait till the data from the api is fetched.
         const data = await response.json();
-        props.setRec(data.recipes);
+        setRec(data.recipes);
         console.log(data.recipes);
     }
 
@@ -54,14 +52,6 @@ const SearchPage = (props) => {
                 </div>
             </div>
 
-            {/* {props.rec.map(recipe => (
-                <RecipeList 
-                    key={recipe._id}
-                    title={recipe.title}
-                    image={recipe.image_url}
-                    rec_id={recipe.recipe_id}
-                />
-            ))} */}
         </div>
     );
 };
